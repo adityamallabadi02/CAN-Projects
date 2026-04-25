@@ -1,0 +1,23 @@
+VERSION ""
+
+
+BS_:
+
+BU_:
+
+
+BO_ 300 GearStatus: 8 Vector__XXX
+ SG_ DriveMode : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ GearShiftStatus : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ GearLevelPos : 6|2@1+ (1,0) [0|3] "GEAR" Vector__XXX
+ SG_ TargetGear : 3|3@1+ (1,0) [0|7] "GEAR" Vector__XXX
+ SG_ CurrentGear : 0|3@1+ (1,0) [0|7] "GEAR" Vector__XXX
+
+BO_ 301 SpeedParameter: 8 Vector__XXX
+ SG_ CalculatedGear : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ OutputShaftSpeed : 16|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+ SG_ InputShaftSpeed : 0|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+
+
+
+

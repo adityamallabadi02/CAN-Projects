@@ -1,0 +1,27 @@
+VERSION ""
+
+
+BS_:
+
+BU_:
+
+
+BO_ 256 Engine_data: 5 Vector__XXX
+ SG_ EngLoad : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ CoolentTemp : 16|16@1+ (0.1,0) [0|6553.5] "C" Vector__XXX
+ SG_ EngSpd : 0|16@1+ (1,0) [0|65535] "RPM" Vector__XXX
+
+BO_ 257 Air_System: 4 Vector__XXX
+ SG_ AirMassFlow : 16|16@1- (0.1,0) [-3276.8|3276.7] "m^3/h" Vector__XXX
+ SG_ InTakeAir : 8|8@1+ (1,0) [0|255] "C" Vector__XXX
+ SG_ ThrottlePos : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+BO_ 258 Fuel_System: 5 Vector__XXX
+ SG_ AirFuelRatio : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ FuelTemp : 16|16@1- (0.1,-40) [-40|3236.7] "C" Vector__XXX
+ SG_ FuelPressure : 8|8@1+ (0.1,0) [0|25.5] "KP" Vector__XXX
+ SG_ FuelLevel : 0|8@1+ (1,0) [0|255] "%" Vector__XXX
+
+
+
+
