@@ -1,0 +1,38 @@
+//Full Automation code
+variables
+{
+  message 0x400 accMsg;  
+  msTimer t1;
+
+
+  int AccPedValue = 0;    
+  int step = 100 / 30;    
+  int direction = 1;      
+}
+on start
+{
+  accMsg.dlc = 8;
+  setTimer(t1, 50);   // 50 ms interval
+}
+
+
+on timer t1
+{
+  AccPedValue += direction * step;
+  if (AccPedValue >= 100)
+  {
+    AccPedValue = 100;
+    direction = -1;
+  }
+  else if (AccPedValue <= 0)
+  {
+    AccPedValue = 0;
+    direction = 1;
+  }
+
+
+  accMsg.byte(0) = (int)AccPedValue;
+  output(accMsg);
+  write("ACC : %d", (int)AccPedValue);
+  setTimer(t1, 50);
+}
